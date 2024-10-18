@@ -11,7 +11,7 @@ import cv2 # тест
 # Загрузка модели Keras
 @st.cache_resource
 def load_model():
-    model = tf.keras.models.load_model('/home/dnl/ds_bootcamp/cv_elbrus/models/danila/new_model.keras')
+    model = tf.keras.models.load_model('models/danila/new_model.keras')
     return model
 
 model = load_model()

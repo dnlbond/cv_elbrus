@@ -6,7 +6,7 @@ import requests
 from io import BytesIO
 
 # Load the YOLO model
-model = torch.hub.load('ultralytics/yolov5', 'custom', path='best.pt')  # Ensure correct path to 'best.pt'
+model = torch.hub.load('ultralytics/yolov5', 'custom', path='models/olga/best.pt')  # Ensure correct path to 'best.pt'
 
 # Title of the app
 st.title("YOLO Object Detection")

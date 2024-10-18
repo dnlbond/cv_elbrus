@@ -11,11 +11,19 @@ selection = st.sidebar.radio("Перейти к странице:", ["Лица /
 
 
 if selection == "Лица / Yolov5":
-    import pages.marina
-    pages.marina.main()
+    marina_file = pages_dir / 'marina' / 'main.py'
+    import importlib.util
+    spec = importlib.util.spec_from_file_location("marina", str(marina_file))
+    marina_module = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(marina_module)
+
 elif selection == "Ветряки / Yolov5":
-    import pages.olga
-    pages.olga.main()
+    olga_file = pages_dir / 'olga' / 'main.py'
+    import importlib.util
+    spec = importlib.util.spec_from_file_location("olga", str(olga_file))
+    olga_module = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(olga_module)
+
 elif selection == "Лес / Unet":
     danila_file = pages_dir / 'danila' / 'danila.py'
     import importlib.util
